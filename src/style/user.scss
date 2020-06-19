@@ -1,0 +1,69 @@
+$bg-img: url("https://www.bitdegree.org/tutorials/wp-content/uploads/2018/08/what-is-a-web-developer.jpg");
+$bg: linear-gradient(90deg, rgba(22, 22, 22, 0.6), rgba(22, 22, 22, 1)), $bg-img;
+$bg-movil: linear-gradient(180deg, rgba(22, 22, 22, 0.6), rgba(22, 22, 22, 1)), $bg-img;
+
+.user-container {
+  padding: 4vh 3vw;
+  height: 92vh;
+  text-align: left;
+  background: $bg center center;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  color: white !important;
+
+  .user-profile {
+    position: relative;
+    top: 30vh;
+
+    .user-img {
+      img {
+        width: 30%;
+        border-radius: 10%;
+      }
+    }
+
+    .user-name {
+      margin-bottom: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .user-bio {
+      font-size: 30px;
+    }
+
+    .user-social {
+      p {
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .user-container {
+    width: 100vw;
+    height: 50vh;
+    text-align: center;
+    background: $bg-movil center center;
+
+    .user-profile {
+      top: 2vh;
+
+      .user-img {
+        img {
+          width: 20%;
+        }
+      }
+    }
+  }
+}

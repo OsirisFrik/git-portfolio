@@ -1,0 +1,52 @@
+.repos {
+  display: grid;
+  grid-template-columns: repeat(2, 0.1fr);
+  grid-gap: 10px;
+  grid-auto-rows: auto;
+  position: relative;
+
+  .repo-card {
+    section {
+      background-color: #272727;
+      padding: 20px 15px;
+      width: 25vw;
+      margin: 10px;
+      color: white;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .repo-data {
+      display: grid;
+      grid-template-columns: repeat(3, 0.5fr);
+    }
+
+    .repo-description {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .repos-container {
+    position: absolute;
+    top: 50vh;
+
+    .repos {
+      grid-template-columns: repeat(1, 0fr);
+
+      .repo-card {
+        section {
+          width: 80vw;
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+}
