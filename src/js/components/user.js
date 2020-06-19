@@ -63,7 +63,7 @@ class UserProfile extends HTMLElement {
       </div>
       <div class="user-info">
         <h1 class="user-name">${this.user.name}</h1>
-        <a href="${this.user.url}" target="_blank">
+        <a href="${this.user.html_url}" target="_blank">
           @${this.user.login}
         </a>
         <p class="user-bio">
