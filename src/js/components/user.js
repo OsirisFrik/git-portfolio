@@ -28,8 +28,10 @@ class UserProfile extends HTMLElement {
     `;
     let blog = `
       <p>
-        <i class="fas fa-link"></i>
-        <a href="${this.user.blog} target="_blank">
+        <i class="fas fa-link"></i> 
+        <a href="${(this.user.blog.startsWith('http') ?
+          this.user.blog : 'http://' + this.user.blog)
+        }" target="_blank">
           ${this.user.blog}
         </a>
       </p>
